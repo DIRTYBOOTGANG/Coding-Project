@@ -10,12 +10,14 @@ var player = {
   inAir: true
 };
 var sheet
-var spriteW = 48;
-var spriteH = 48;
+var spriteW = 60;
+var spriteH = 60;
 var spriteNum = 4;
 var frame = 0;
 
 var gravity = 0.3;
+
+var sound;
 
 var cloud;
 
@@ -61,12 +63,55 @@ var clouds = [{
     l: 40,
     w: 50,
   },
+  {
+    x: 220,
+    y: -750,
+    l: 320,
+    w: 80,
+  },
+  {
+    x: 160,
+    y: -920,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 120,
+    y: -1090,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 420,
+    y: -1120,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 220,
+    y: -1290,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 20,
+    y: -1460,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 250,
+    y: -1630,
+    l: 120,
+    w: 80,
+  },
 ];
 
 function setup() {
   createCanvas(600, 500);
   cloud = loadImage("https://i.postimg.cc/hvTrDDv5/kisscc0-cloud-drawing-kleurplaat-rainbow-nuage-cloud-5b3f463fba6.png");
   sheet = loadImage("https://i.postimg.cc/C1Zn0c5P/Cloud-Boy.png");
+	sound = loadSound("Cartoon Hop-SoundBible.com-553158131.mp3");
 }
 
 function draw() {
@@ -91,6 +136,9 @@ function draw() {
   if (!player.inAir && keyIsDown(UP_ARROW)) {
     player.inAir = true;
     player.ySpeed = -jumpSpeed;
+  }
+  if (keyIsDown(UP_ARROW)) {
+  	sound.play();
   }
 
   // Update player
@@ -168,6 +216,7 @@ function draw() {
 	textSize(20);
 	textAlign(CENTER, CENTER);
 	text("Cloud Jumper", width / 2, 400);
+  text("Victory!", width / 2, -1850);
   
 }
 
