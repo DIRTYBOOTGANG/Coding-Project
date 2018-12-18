@@ -1,0 +1,6 @@
+# Organization 
+When I normally organize for a project, I jot down some ideas onto a piece of paper. When using Github, I was able to create a to-do list which I could use as a guideline for what I had to do. When I complete a project, I just concern myself with submitting it in the proper place with all of the requirements of the project being met. When using Github, I had to upload every new version of my project so I would better know what I was adding to my project as it evolved.
+# Assessment 
+For me, it is hard to say if using Git on this project was an improvemnet or not. I was the only person who was working on my project and there really was no point in me uploading it since it wasn't going to become published later on. If I am working with a team on a coding project in the future, I could see us using Git as a way of indivdually contributing to a larger project.
+# Reflection 
+Using Git has shown me a different way of organizing a project and monitoring it as it is updated. It has also shown me a new way in which I could work with others remotely on the same project. Over the span of the mini-course, I learned how to use the command-line, acquired a better understanding of how version control works, and learned how to use Github and other programs like it in order to work with others on a project. 
