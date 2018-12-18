@@ -18,6 +18,7 @@ var frame = 0;
 var gravity = 0.3;
 
 var sound;
+var mySound;
 
 var cloud;
 
@@ -105,13 +106,116 @@ var clouds = [{
     l: 120,
     w: 80,
   },
+  {
+    x: 20,
+    y: -1730,
+    l: 120,
+    w: 80,
+  },
+  {
+    x: 20,
+    y: -1880,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 350,
+    y: -1880,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 450,
+    y: -2040,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 350,
+    y: -2180,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 100,
+    y: -2180,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 50,
+    y: -2350,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 25,
+    y: -2500,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 300,
+    y: -2600,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 400,
+    y: -2700,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 150,
+    y: -2800,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 50,
+    y: -2900,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 350,
+    y: -3000,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 150,
+    y: -3100,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 50,
+    y: -3200,
+    l: 80,
+    w: 80,
+  },
+  {
+    x: 250,
+    y: -3300,
+    l: 160,
+    w: 80,
+  },
 ];
+
+function preload() {
+  soundFormats('mp3', 'ogg');
+  mySound = loadSound("Lenny Kravitz - Fly Away.mp3");
+}
 
 function setup() {
   createCanvas(600, 500);
   cloud = loadImage("https://i.postimg.cc/hvTrDDv5/kisscc0-cloud-drawing-kleurplaat-rainbow-nuage-cloud-5b3f463fba6.png");
   sheet = loadImage("https://i.postimg.cc/C1Zn0c5P/Cloud-Boy.png");
-	sound = loadSound("Cartoon Hop-SoundBible.com-553158131.mp3");
+  sound = loadSound("Cartoon Hop-SoundBible.com-553158131.mp3");  
+  mySound.play();
+  mySound.loop();
 }
 
 function draw() {
@@ -216,7 +320,8 @@ function draw() {
 	textSize(20);
 	textAlign(CENTER, CENTER);
 	text("Cloud Jumper", width / 2, 400);
-  text("Victory!", width / 2, -1850);
+  text("Victory!", width / 2, -3500);
+  text("Press and hold the down arrow to dance!", width / 2, -3400);
   
 }
 
